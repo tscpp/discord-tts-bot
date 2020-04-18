@@ -38,4 +38,4 @@ client.on('message', (message) => {
 
 say.clear();
 
-client.login(fs.readFileSync('token').toString());
+client.login(fs.readFileSync('token.txt').toString());
