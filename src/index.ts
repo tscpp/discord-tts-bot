@@ -1,5 +1,6 @@
 import { Client } from 'discord.js';
 import { say } from './say';
+import * as fs from 'fs';
 
 const client = new Client();
 
@@ -37,4 +38,4 @@ client.on('message', (message) => {
 
 say.clear();
 
-client.login("NzAxMDIyNzA1ODQzMTc1NDY0.Xprmcg.MxaxtNJeDRvNVZE5UnQohtH-GAo");
+client.login(fs.readFileSync('token').toString());
