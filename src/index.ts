@@ -16,7 +16,7 @@ client.on('message', (message) => {
 		let text: string = null;
 
 		{
-			const m = message.content.match(/tts (.+)/);
+			const m = message.content.match(/tts ([^]+)/);
 
 			if (m && m[1])
 				text = m[1];
@@ -31,7 +31,14 @@ client.on('message', (message) => {
 				return;
 			}
 
-			say(message.member.voice.channel, text);
+			if (text.length > 1000) {
+				message.channel.send('A TTS message cannot be longer that 1000 characters.');
+				return;
+			}
+
+			console.log(text);
+
+			say(message.member.voice.channel, text.replace(/\n/g, ' '));
 		}
 	}
 });

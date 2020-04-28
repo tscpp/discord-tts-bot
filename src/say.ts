@@ -16,7 +16,6 @@ const swearWords = [
 	'faggot',
 	'flaps',
 	'gash',
-	'knob',
 	'minge',
 	'prick',
 	'punani',
@@ -25,7 +24,9 @@ const swearWords = [
 	'twat',
 	'cunt',
 	'fuck',
-	'tit'
+	'tit',
+	'nigger',
+	'nigga'
 ];
 
 let swearString = '';
